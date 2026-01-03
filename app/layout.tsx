@@ -18,26 +18,70 @@ const ibmPlexMono = IBM_Plex_Mono({
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"], variable: "--font-bebas" })
 
 export const metadata: Metadata = {
-  title: "Pollux Studio — Privacy-First Tools for Open Platforms",
+  title: {
+    default: "Pollux Studio — Privacy-First Tools for Open Platforms",
+    template: "%s | Pollux Studio",
+  },
   description:
-    "Building privacy-first, system-aware tools that improve how people interact with their devices. Transparency, user control, and clarity in every interaction.",
-  generator: "v0.app",
+    "Pollux Studio is an open-source software collective building privacy-first, system-aware tools. We empower users through clarity, control, and transparent design, operating close to the system layer to explain how systems behave.",
+  keywords: [
+    "Pollux Studio",
+    "Open Source",
+    "Privacy First",
+    "System Tools",
+    "Ubuntu Touch",
+    "UX Infrastructure",
+    "Transparency",
+    "User Control",
+    "System Awareness",
+    "Ethical Software",
+  ],
+  authors: [{ name: "Pollux Studio", url: "https://polluxstudio.in" }],
+  creator: "Pollux Studio",
+  publisher: "Pollux Studio",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
-    icon: [
+    icon: "/pollux-favicon.png",
+    shortcut: "/pollux-favicon.png",
+    apple: "/pollux-favicon.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://polluxstudio.in",
+    title: "Pollux Studio — Clarity, Control, Trust",
+    description:
+      "Building privacy-first, system-aware tools that explain how systems behave. Join us in creating open, user-respecting ecosystems.",
+    siteName: "Pollux Studio",
+    images: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/pollux-logo-white.png",
+        width: 1200,
+        height: 630,
+        alt: "Pollux Studio",
       },
     ],
-    apple: "/apple-icon.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pollux Studio — Privacy-First Tools",
+    description:
+      "Building privacy-first, system-aware tools that explain how systems behave. We prioritize correctness, clarity, and long-term reliability.",
+    images: ["/pollux-logo-white.png"],
+    creator: "@polluxstudio",
+  },
+  alternates: {
+    canonical: "https://polluxstudio.in",
   },
 }
 
